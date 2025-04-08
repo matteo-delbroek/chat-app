@@ -39,7 +39,7 @@ def verwijder_berichten():
     huidige_tijd = time.time()
     
     # Als het 10 minuten zijn (600 seconden) sinds de laatste verwijdering, verwijder de berichten
-    if huidige_tijd - LAATSTE_VERWIJDERING > 10:
+    if huidige_tijd - LAATSTE_VERWIJDERING > 1800:
         with open(BESTAND, "w", encoding="utf-8") as f:
             f.truncate(0)  # Verwijdert alle berichten
         LAATSTE_VERWIJDERING = huidige_tijd
