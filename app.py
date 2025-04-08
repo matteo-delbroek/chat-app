@@ -1,4 +1,4 @@
-pytnon: from flask import Flask, request, jsonify, send_from_directory
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 import os
 
@@ -34,4 +34,3 @@ def send_message():
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0')
-
